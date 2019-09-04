@@ -9,7 +9,8 @@ var myMusic = [
       "LP"
     ],
     "gold": true
-  }, {
+  }, 
+  {
     "artist": "erwin",
     "title":"butterscotch",
     "release_year": 1995,
