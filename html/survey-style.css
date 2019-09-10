@@ -1,0 +1,78 @@
+h1, h2 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 300;
+}
+p, label, input, .radio-list {
+  font-family: 'Abel', sans-serif;
+}
+body {
+  background-color: #85CDCA;
+}
+.center {
+  text-align: center;
+}
+.title-desc {
+  width: 40%;
+  margin: 0 auto;
+}
+.whole-form {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  background-color:#fff;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.questions {
+  margin-left: 5%;
+  display:flex;
+  flex-direction: column;
+}
+.questions > label {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.important-form {
+  height:30px;
+  font-family: 'Abel', sans-serif !important;
+  font-size:16px;
+  width: 60%;
+  padding-left: 20px;
+  margin-left: 20px;
+  border-radius: 50px;
+  border-style: ridge;
+  border: 1px solid rgba(0, 0, 0, .5);
+  transition: border 0.5s;
+}
+.important-form:focus {
+  border: 3px #E8A87C solid;
+}
+.form-button {
+  margin-top: 20px;
+  width: 150px;
+  height: 50px;
+  background-color: #E8A87C;
+  box-shadow: none !Important;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500px;
+}
+.form-button:hover {
+  cursor: pointer;
+}
+.radio-choices {
+  margin-top: 20px;
+}
+.radio-list {
+  list-style-type: none;
+}
+.any-area {
+  height: 250px;
+}
+/* input:invalid {
+  border: dotted #FF0000;
+} */

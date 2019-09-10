@@ -1,0 +1,77 @@
+
+<html>
+  <head>
+    <title>Code Pen Survey Form</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="survey-style.css">
+  </head>
+  <body>
+   <div class="whole-form">
+     <div class="container">
+       <div class="center">
+        <h1 id="title">Potato's Survey Form</h1>
+        <p id="description" class="title-desc">Hey everyone! I'd like to know how we can conquer the world. Fill up the form below and let me know what you think</p>
+       </div>
+        <div class="survey-form" >
+          <form id="survey-form" class="literal-form">
+            <h2 class="center">Here are some questions for you</h2>
+            <div class="questions">
+              <label id="email-label" for="email">Email:*</label>
+              <input type="email" class="important-form email-form" id="email" name="email" placeholder="Enter email here" required></input>
+              <label id="name-label" for="name">Name:*</label>
+              <input class="important-form" name="name" id="name" placeholder="Enter name here" required></input>
+              <label id="number-label" for="number">Social Security Number:*</label>
+              <input name="number" class="important-form" type="number" id="number" placeholder="Enter SSN here" min="5" max="12" required></input>
+             <label for="dropdown">Here are acceptable professions and people for conquering the world.<br>Select what you are.</label>
+            <select class="important-form" id="dropdown" name="profession-select">
+              <option>Wizard</option>
+              <option>Bruce Lee</option>
+              <option>Chuck Norris</option>
+              <option>Professional Star Craft Player</option>
+              <option>Master Ramen Chef</option>
+              <option>Sushi Master</option>
+              <option>A Polyglot</option>
+            </select>
+            <div class="radio-choices">
+              <label>
+                Select weapon of choice for world domination.
+              </label>
+              <ul class="radio-list">
+                <li><input type="radio" value="1" name="radio-buttons">Pen and Paper</input></li>
+                <li><input type="radio" value="1"  name="radio-buttons">Speeches</input></li>
+                <li><input type="radio" value="1"  name="radio-buttons">Religion</input></li>
+                <li><input type="radio" value="1"  name="radio-buttons">Weapons of Mass Destruction</input></li>
+                <li><input type="radio" value="1"  name="radio-buttons">Cyber Attacks</input></li>
+              </ul>
+            </div>
+              <label>Select A Power:</label>
+              <select class="important-form" id="drop-down">
+                <option>Invisibility During Darkness</option>
+                <option>Ability To Summon Spiders</option>
+                <option>Make People Believe You</option>
+              </select>
+              <label>Check Your Team Mates</label>
+                <ul class="radio-list">
+                  <li><input class="team-choose" name="check" value="1" type="checkbox">Hitler</input></li>
+                  <li><input class="team-choose"  name="check" value="2" type="checkbox">Dave Chappelle</input></li>
+                  <li><input class="team-choose"  name="check" value="3" type="checkbox">Ryan Gosling</input></li>
+                  <li><input class="team-choose"  name="check" value="4" type="checkbox">Your Favorite Vocalist</input></li>
+                  <li><input class="team-choose"  name="check" value="5" type="checkbox">SpongeBob SquarePants</input></li>
+                  <li><input class="team-choose"  name="check" value="6" type="checkbox">The Rock</input></li>
+                  <li><input class="team-choose"  name="check" value="7" type="checkbox">The Pebble</input></li>
+                </ul>
+              <label>Anything else you need for world domination?</label>
+              <textarea class="any-area" placeholder="Weapons? Strategies?"></textarea>
+              <div>
+                <button id="submit" class="form-button">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+     </div>
+    </div>
+  </body>
+  <footer>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+  </footer>
+</html>
