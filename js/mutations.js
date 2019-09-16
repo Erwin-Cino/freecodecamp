@@ -12,7 +12,20 @@ function mutation(arr) {
   })
   console.log(newArr);
   
-  return result;
-}
+  return result
+
+  // stringFirst = arr[0].split('').map(x => {
+  //   x.toLowerCase(i);
+  //   i++;
+  //   arr[1].split('').map(y => {
+  //     y.toLowerCase(i);
+  //      if (x == y) {
+  //        console.log(x);
+  //        result = true;
+  //      } else {
+  //        result = false;
+  //      }
+  //   })
+  // });
 
 mutation(["ZyxwVutsrqponmlkjihgfedcba", "qrstu"]);
