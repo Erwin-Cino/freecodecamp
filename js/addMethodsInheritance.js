@@ -16,4 +16,4 @@ Dog.prototype.constructor = Dog;
 let beagle = new Dog();
 
 beagle.eat(); // Should print "nom nom nom"
-beagle.bark(); // Should print "Woof!"
+beagle.bark(); // Should print "Woof!"	
