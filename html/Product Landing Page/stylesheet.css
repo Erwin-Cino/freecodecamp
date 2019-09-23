@@ -74,3 +74,63 @@
 .pitch-list {
 	font-size: 18px !important;
 }
+.submit-email {
+	margin-top: 1em;
+}
+.title-form {
+	margin: 0 auto;
+	text-align: center;
+	background-color: #fff;
+	width:40%;
+	padding: 20px 0px 20px 0px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.form-sec {
+	background-color: #ADADAD;
+	padding: 20px 0px 20px 0px;
+	margin: 2em 0 2em 0;
+	display: flex;
+}
+.e-label {
+
+}
+.important-form {
+	width: 300px;
+	height: 23px;
+}
+.form-button {
+	background-color: #83687B;
+	border: none;
+	height: 30px;
+	width: 150px;
+	border-radius: 50px;
+	color: #fff;
+	font-size: 18px;
+}
+.two-halves {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+.half-text-left, .half-right-img {
+	width: 50%;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  margin-right: 30px;
+}
+
+.item {
+  display: flex; 
+  width: 32%;
+  padding-bottom: 18%; /* 32:18, i.e. 16:9 */
+  margin-bottom: 2%; /* (100-32*3)/2 */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  justify-content: center;
+}
+.form-button:hover {
+  cursor: pointer;
+}
