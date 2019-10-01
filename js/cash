@@ -1,0 +1,98 @@
+function checkCashRegister(price, cash, cid) {
+  var change = {
+    "status":"",
+    "change":[]
+  };
+  let cashChange = cash - price;
+  // Here is your change, ma'am.
+  let total = cid.reduce((a,b) => {
+    return a + b[1];
+  },0)
+  let newObj = cid.reduce((a,b) => {
+    a[b[0]] = b[1];
+    return a;
+  },{})
+  
+  //console.log(JSON.stringify(newObj));
+  
+  // let reduceCid = cid.reduce((a,b) => {
+  //   if (cashChange == b[1]) {
+  //     a.status = "CLOSED";
+  //     a.change = cid.splice(cid.indexOf(b));
+  //   } else if (total > cashChange){
+  //     a.status = "OPEN";
+  //     a.change = [];
+  //   } else if (cashChange % b[1] !== 0 || cashChange > total) {
+  //     a.status = "INSUFFICIENT_FUNDS";
+  //     a.change = [];
+  //   } 
+  //   return a;
+  //   //console.log(JSON.stringify(a))
+  // }, {"status": "", "change": []})
+  // console.log(JSON.stringify(reduceCid));
+  // return reduceCid;
+
+  
+
+  // let paperCash = cid.reduce((a,b) => {
+  //   if (cashChange >= 100) {
+  //     a.OHD += 1;
+  //     cashChange -= 100;
+  //   } else if (cashChange >= 20) {
+  //     a.TWD += 1;
+  //     cashChange -= 20;
+  //   } else if (cashChange >= 5) {
+  //     a.FVD += 5;
+  //     cashChange -= 5;
+  //   } else if (cashChange >= 1) {
+  //     a.D += 1;
+  //     cashChange -= 5;
+  //   } else if (cashChange >= 0.25) {
+  //     a.Quarter += 1
+  //     cashChange -= 0.25;
+  //   } else if (cashChange >= 0.1) {
+  //     a.Dime += 1
+  //     cashChange -= 0.1;
+  //   } else if (cashChange >= 0.05) {
+  //     a.Nickel += 1;
+  //     cashChange -= 0.05;
+  //   } else if (cashChange >= 0.01) {
+  //     a.Penny += 1;
+  //     cashChange -= 0.05;
+  //   }
+  //   return a;
+  // },{"OHD": 0, "TWD": 0, "FVD": 0, "D": 0, "Quarter": 0, "Dime": 0, "Nickel": 0, "Penny": 0})
+
+    let mappedCid = cid.map(x => {
+      if (cashChange % x[1] !== 0 || cashChange > total) {
+        change.status = "INSUFFICIENT_FUNDS";
+        change.change = [];
+      } else if (cashChange % x[1] == 0) {
+        change.status = "CLOSED";
+        change.change = cid.slice(cid.indexOf(x));
+      }
+    })
+    console.log(JSON.stringify(mappedCid));
+    return mappedCid;
+
+ 
+  // console.log(JSON.stringify(reduceCid));
+  // console.log(total)
+  // console.log(cashChange);
+  // console.log(JSON.stringify(change));
+  // console.log(JSON.stringify(paperCash));
+  //return change;
+}
+
+// Example cash-in-drawer array:
+// [["PENNY", 1.01],
+// ["NICKEL", 2.05],
+// ["DIME", 3.1],
+// ["QUARTER", 4.25],
+// ["ONE", 90],
+// ["FIVE", 55],
+// ["TEN", 20],
+// ["TWENTY", 60],
+// ["ONE HUNDRED", 100]]
+
+checkCashRegister(19.5, 20, [["PENNY", 0.01], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 1], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]]);
