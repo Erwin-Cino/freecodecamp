@@ -1,0 +1,17 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+#navbar {
+	position: fixed;
+	width: 250px;
+	background: #0088bb;
+}
+#navbar > ul {
+	list-style-type: none;
+}
+#navbar > header {
+	text-align: center;
+	margin-top: 50px;
+	text-transform: uppercase;
+}
