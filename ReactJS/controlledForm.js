@@ -37,3 +37,5 @@ class MyForm extends React.Component {
     );
   }
 };
+
+//what is inside the input will go to the h1 tag when the from was submitted
